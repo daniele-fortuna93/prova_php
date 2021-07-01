@@ -29,7 +29,7 @@
                 <h2>Lista cose da fare</h2>
                 <button @click="getData(); show = !show">Mostra lista</button>
                 <ul v-show="show">
-                    <li v-for="(thing, index) in list">{{ thing }} <span @click="deleteThing(index)">X</span></li>
+                    <li v-for="(thing, index) in list">{{ thing }} <button class="button button-clear" @click="deleteThing(index)">X</button></li>
                 </ul>
                 </section>
 
