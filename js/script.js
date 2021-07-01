@@ -24,6 +24,10 @@ new Vue({
                 .then((result) => {
                     this.list = result.data;
                 });
+        },
+        deleteThing: function(index){
+            axios.post(this.hostName + '/prova_php/delete.php', index);
+            this.list.splice(index,1);
         }
     }
 });
