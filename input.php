@@ -3,8 +3,8 @@
           
         $file_name = 'input.json';
         $list = json_decode(file_get_contents($file_name), true);
-        $_POST = json_decode(file_get_contents("php://input"), true);
-        $list[] = $_POST['to_do'];
+        $input_text = json_decode(file_get_contents("php://input"), true);
+        $list[] = $input_text['to_do'];
 
         $response = json_encode($list);
               
